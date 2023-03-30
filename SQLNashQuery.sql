@@ -72,7 +72,7 @@ FROM NashHousing.dbo.HousingDB*/
 SELECT OwnerAddress
 FROM NashHousing.dbo.HousingDB
 
---Now We split the OwnerAddress into (Address,City)
+--Now We split the OwnerAddress into (Address,City,State)
 
 SELECT PARSENAME(REPLACE(OwnerAddress,',','.'),3),
 PARSENAME(REPLACE(OwnerAddress,',','.'),2),
